@@ -40,7 +40,8 @@ public class Client {
             objImagen.setNombre(file.getName());
             objImagen.setTamano((int) file.length());
             objImagen.setDatos(datos);
-            
+            objImagen.setRuta(file.getAbsolutePath());
+
             //Envio de objeto
             salida.writeObject(objImagen);
 

@@ -7,7 +7,14 @@ public class Imagen implements Serializable {
     private String nombre;
     private int tamano;
     private byte[] datos;
+    private String ruta;
     
+    public String getRuta() {
+        return ruta;
+    }
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
+    }
     public String getNombre() {
         return nombre;
     }

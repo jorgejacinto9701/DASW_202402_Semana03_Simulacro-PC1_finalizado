@@ -31,10 +31,11 @@ public class Server {
                 //Guardar archivo en BD
                 System.out.println("Guardando archivo en BD...");
                 Connection conn = MyConnection.getConexion();
-                PreparedStatement pstm = conn.prepareStatement("INSERT INTO archivo(nombre, tamano, datos) VALUES(?,?,?)");
+                PreparedStatement pstm = conn.prepareStatement("INSERT INTO archivo(nombre, tamano, datos, ruta) VALUES(?,?,?,?)");
                 pstm.setString(1, objImagen.getNombre());
                 pstm.setInt(2, objImagen.getTamano());
                 pstm.setBytes(3, objImagen.getDatos());
+                pstm.setString(4, objImagen.getRuta());
                 int insertados = pstm.executeUpdate();
                 System.out.println("Registros insertados: " + insertados);
 
